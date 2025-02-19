@@ -91,3 +91,53 @@ has_good_credit=False
 has_high_income=True
 if has_high_income and has_good_credit:
     print("Eligible for loan")
+
+if has_high_income and not has_good_credit:
+    print("Eligible for loan")
+
+#comparison operators
+temperature=35
+if  temperature>30:
+    print("It's a hot day")
+else:
+    print("It's not a hot day") 
+
+name="Alice"
+if len(name)<3:
+    print("Name must be at least 3 characters")
+elif len(name)>50:
+    print("Name can be a maximum of 50 characters")
+else:
+    print("Name looks good")
+
+
+#weight converter
+weight=int(input('Weight: '))
+unit=input('(L)bs or (K)g: ')
+if unit.upper() == "L":
+    converted=weight*0.45
+    print(f"You are {converted} kilos") 
+else:
+    converted=weight/0.45   
+    print(f"You are {converted} pounds")   
+
+#while loops
+i=1
+while i<=5:
+    print('*'*i)
+    i+=1
+print("Done")
+
+
+#guessing game
+secret_number=9
+guess_count=0
+guess_limit=3
+while guess_count<guess_limit:
+    guess=int(input('Guess: '))
+    guess_count+=1 
+    if guess==secret_number:
+        print("You won!")
+        break
+    else:
+        print("Sorry, you failed!")
